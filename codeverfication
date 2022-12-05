@@ -1,0 +1,13 @@
+def codeverification(str):
+    
+    cond1 = bool(re.match('^[a-zA-Z]', str))
+    cond2 = bool(re.match(r'^\w+$', str))
+    cond3 = bool(str[-1] != '_')
+    cond4 = len(str) >= 4 and len(str) <= 25
+    if all([cond1 == True, 
+          cond2 == True, 
+          cond3 == True, 
+          len(str) >= 4 and len(str) <= 25]):
+        return True
+    else:
+        return False
